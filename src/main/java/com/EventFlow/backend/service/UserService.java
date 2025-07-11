@@ -280,10 +280,10 @@ public class UserService {
 
             passwordResetTokenRepository.save(resetToken);
 
-            //String resetUrl = "https://event-flow.app/reset-password?token=" + token;
+            String resetUrl = "https://event-flow-six.vercel.app/reset-password?token=" + token;
 
-            //emailService.sendEmail(user.getEmail(), "Reset your password",
-                    //"Click the link to reset your password: " + resetUrl);
+            emailService.sendEmail(user.getEmail(), "Reset your password",
+                    "Click the link to reset your password: " + resetUrl);
 
         } catch (Exception e) {
             e.printStackTrace(); // log error
